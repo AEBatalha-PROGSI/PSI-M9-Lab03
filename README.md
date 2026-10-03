@@ -2,7 +2,7 @@
 
 Neste laboratório, vais criar uma aplicação WPF que gera geradores numéricos com o ciclo for e processa arrays de nomes/notas com o ciclo foreach, exibindo os resultados dinamicamente numa ListBox.
 
-![Interface inicial](AnalisadorDeSequencias/Lab03.0.png)
+![Interface inicial](AnalisadorDeSequenciasWPF/Lab03.0.png)
 
 ## Exercício 1: Somatório e contagem com ciclo WHILE: 
 Cria um novo botão na interface com o conteúdo 'Somatório (while)'. Ao ser clicado, o programa deve ler o número N da caixa de texto e, utilizando um ciclo 'while', calcular a soma de todos os números inteiros de 1 até N (1 + 2 + ... + N) e apresentar o resultado final na ListBox.
