@@ -1,0 +1,55 @@
+﻿<Window x:Class="AnalisadorDeSequenciasWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnalisadorDeSequenciasWPF"
+        mc:Ignorable="d"
+        Title="Lab 03: Ciclos e Arrays em WPF" Height="420" Width="700"
+        WindowStartupLocation="CenterScreen" Background="#F8F9FA">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Analisador de Sequências e Arrays" FontSize="18" 
+                   FontWeight="Bold" Foreground="#1F4E79" Margin="0,0,0,10"/>
+
+        <!-- Controlo de Entrada Atualizado para suportar todos os Exercícios -->
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0,0,0,10">
+            <!-- Linha de Comandos original + Exercício 1 -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <Label Content="Número limite/N:" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtNumero" Width="60" Height="26" Margin="5,0,10,0" VerticalContentAlignment="Center" Text="10"/>
+
+                <Button x:Name="btnGerarTabuada" Content="Gerar Tabuada (for)" Width="130" Background="#1F4E79" Foreground="White" Click="btnGerarTabuada_Click"/>
+                <Button x:Name="btnProcessarArray" Content="Analisar Array (foreach)" Width="140" Margin="5,0,0,0" Background="#2E7D32" Foreground="White" Click="btnProcessarArray_Click"/>
+
+                <!-- NOVO: Botão Exercício 1 -->
+                <Button x:Name="btnSomatorioWhile" Content="Somatório (while)" Width="130" Margin="5,0,0,0" Background="#D32F2F" Foreground="White" Click="btnSomatorioWhile_Click"/>
+            </StackPanel>
+
+            <!-- Linha de Comandos para o Exercício 2 e Exercício 3 -->
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <!-- NOVO: Botão Exercício 2 -->
+                <Button x:Name="btnMaximoArray" Content="Pesquisar Máximo (foreach)" Width="170" Background="#ED6C02" Foreground="White" Click="btnMaximoArray_Click"/>
+
+                <!-- NOVO: Elementos Exercício 3 -->
+                <Label Content="Letra para Filtro:" VerticalAlignment="Center" Margin="15,0,0,0"/>
+                <TextBox x:Name="txtLetraFiltro" Width="40" Height="26" Margin="5,0,10,0" VerticalContentAlignment="Center" MaxLength="1"/>
+                <Button x:Name="btnFiltrarLetra" Content="Filtrar por Letra" Width="120" Background="#7B1FA2" Foreground="White" Click="btnFiltrarLetra_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <!-- Lista de Resultados -->
+        <ListBox x:Name="lstResultados" Grid.Row="2" FontSize="12" 
+                 Background="White" BorderBrush="#CCCCCC" BorderThickness="1"/>
+
+        <!-- Painel Inferior de Ações -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="btnLimpar" Content="Limpar Lista" Width="100" Height="26" Click="btnLimpar_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
